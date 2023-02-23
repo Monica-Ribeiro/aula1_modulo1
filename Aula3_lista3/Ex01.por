@@ -76,7 +76,7 @@ programa {
         escreva("\nJogada inválida!")
       }
       escreva("\nQuer continuar ? [S/N]: ")
-      leia(resp)
+      leia(resposta)
       }
       se(resposta == "n")
       {
