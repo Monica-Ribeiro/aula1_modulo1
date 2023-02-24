@@ -1,90 +1,43 @@
 programa {
   inclua biblioteca Util --> u
   funcao inicio() {
-    inteiro computador, jogador
-    cadeia resposta = "s"
-    escreva("**VAMOS JOGAR**\n")
-    u.aguarde(1000)
-    enquanto(resposta == "s")
-    {
-      escreva("Qual sua jogada?\n")
-      u.aguarde(1000)
-      escreva("ESCOLHA:\n")
-      u.aguarde(1000)
-      escreva("[0] - PEDRA\n")
-      u.aguarde(1000)
-      escreva("[1] - TESOURA\n")
-      u.aguarde(1000)
-      escreva("[2] - PAPEL\n")
-      u.aguarde(1000)
-      escreva("Sua jogada: ")
-      leia(jogador)
-      u.aguarde(1000)
-      escreva("JÔ")
-      u.aguarde(1000)
-      escreva("KÊN")
-      u.aguarde(1000)
-      escreva("PÔ!!!\n")
-      u.aguarde(1000)
-      escreva("Computador jogou: ")
-      computador = u.sorteia(0, 2)
-      escreva(computador)
-      u.aguarde(1000)
-      //PEDRA
-      se(computador == 0 e jogador == 0)
+    real salario
+    real maiorSalario = 0
+    real mediaSalario = 0
+    real mediaFilhos = 0 
+    real soma = 0
+    real quantidadeFilhos = 0 
+    real somaFilhos = 0 
+    real percentual = 0 
+    real quantidadeSalario = 0
+    inteiro filhos, contador = 0
+
+   escreva("**Pesquisa Habitacional**\n")
+   u.aguarde(1000)
+
+    enquanto(contador < 3)
+    {   escreva("Salário: \n")
+        leia(salario)
+        escreva("Quantos filhos? \n")
+        leia(filhos)
+      se(salario > maiorSalario)
       {
-        escreva("\nEmpate!!!")
+        maiorSalario = salario
+        soma = soma + salario
+        quantidadeSalario = quantidadeSalario + 1
+        mediaSalario = soma / quantidadeSalario
+        percentual = salario / quantidadeSalario
+        somaFilhos = somaFilhos + filhos
+        quantidadeFilhos = quantidadeFilhos + 1
+        mediaFilhos = somaFilhos / quantidadeFilhos
       }
-      senao se(computador == 0 e jogador == 1)
-      {
-        escreva("\nComputador venceu!!!")
-      }
-      senao se(jogador == 0 e computador == 1)
-      {
-        escreva("\nJogador venceu!!!")
-      }
-      senao se(computador == 1 e jogador == 1)
-      {
-        escreva("\nEmpate!!!")
-      }//PAPEL
-      senao se(computador == 0 e jogador == 2)
-      {
-        escreva("\nJogador venceu!!!")
-      }
-      senao se(jogador == 0 e computador == 2)
-      {
-        escreva("\nComputador venceu!!!")
-      }
-      senao se(computador == 2 e jogador == 2)
-      {
-        escreva("\nEmpate!!!")
-      }//TESOURA
-      senao se(computador == 1 e jogador == 2)
-      {
-        escreva("\nComputador venceu!!!")
-      }
-      senao se(jogador == 1 e computador == 2)
-      {
-        escreva("\nJogador venceu!!!")
-      }
-      senao se(computador == 2 e jogador == 2)
-      {
-        escreva("\nEmpate!!!")
-      }
-      senao
-      {
-        escreva("\nJogada inválida!")
-      }
-      escreva("\nQuer continuar ? [S/N]: ")
-      leia(resposta)
-      }
-      se(resposta == "n")
-      {
-        escreva("\nFINALIZANDO...")
+        contador++
+    }   
+        escreva("Finalizando...")
         u.aguarde(1000)
-        escreva("\n***Fim de jogo***")
-        u.aguarde(1000)
-        escreva("\n   VOLTE SEMPRE!!!")
-    }
+        escreva("\nO maior salário foi: " + maiorSalario)
+        escreva("\nQuantidade salarios informada: " + quantidadeSalario + "\nMédia salarial da população: " + mediaSalario)
+        escreva("\nQuantidade filhos informada: " + quantidadeFilhos + "\nMédia de filhos por habitante: " + mediaFilhos)
+        escreva("\nPercentual de pessoas com salário até 1000,00: " + percentual)
   }
 }

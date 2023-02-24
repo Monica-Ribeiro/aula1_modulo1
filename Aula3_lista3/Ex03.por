@@ -1,43 +1,31 @@
 programa {
   inclua biblioteca Util --> u
   funcao inicio() {
-    real salario
-    real maiorSalario = 0
-    real mediaSalario = 0
-    real mediaFilhos = 0 
-    real soma = 0
-    real quantidadeFilhos = 0 
-    real somaFilhos = 0 
-    real percentual = 0 
-    real quantidadeSalario = 0
-    inteiro filhos, contador = 0
+    real preco = 0, quantidade = 0, soma = 0
+    cadeia resposta = "s"
 
-   escreva("**Pesquisa Habitacional**\n")
-   u.aguarde(1000)
-
-    enquanto(contador < 3)
-    {   escreva("Salário: \n")
-        leia(salario)
-        escreva("Quantos filhos? \n")
-        leia(filhos)
-      se(salario > maiorSalario)
-      {
-        maiorSalario = salario
-        soma = soma + salario
-        quantidadeSalario = quantidadeSalario + 1
-        mediaSalario = soma / quantidadeSalario
-        percentual = salario / quantidadeSalario
-        somaFilhos = somaFilhos + filhos
-        quantidadeFilhos = quantidadeFilhos + 1
-        mediaFilhos = somaFilhos / quantidadeFilhos
-      }
-        contador++
-    }   
-        escreva("Finalizando...")
-        u.aguarde(1000)
-        escreva("\nO maior salário foi: " + maiorSalario)
-        escreva("\nQuantidade salarios informada: " + quantidadeSalario + "\nMédia salarial da população: " + mediaSalario)
-        escreva("\nQuantidade filhos informada: " + quantidadeFilhos + "\nMédia de filhos por habitante: " + mediaFilhos)
-        escreva("\nPercentual de pessoas com salário até 1000,00: " + percentual)
+    enquanto(resposta == "s")
+    {
+      escreva("Valor do produto:\n")
+      leia(preco)
+      escreva("Quer continuar? [S/N]:\n")
+      leia(resposta)
+      quantidade = quantidade + 1
+      soma = soma + preco
+    }
+    se(resposta == "n")
+     {
+      escreva("Finalizando...\n")
+      u.aguarde(1000)
+     }
+     escreva("Você digitou: " + quantidade + " produtos\n")
+     u.aguarde(1000)
+     escreva("Soma total dos produtos R$: " + soma + "\n")
+     u.aguarde(1000)
+     se(soma > 90)
+     {
+      u.aguarde(1000)
+      escreva("Parabéns! Você ganhou frete grátis em sua compra no valor de R$ " + soma)
+     }
   }
 }
