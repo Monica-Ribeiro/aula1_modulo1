@@ -1,7 +1,8 @@
 programa
 {
 	
-funcao inteiro maiorNumero(inteiro numero1, inteiro numero2, inteiro numero3){
+	funcao inteiro maiorNumero(inteiro numero1, inteiro numero2, inteiro numero3)
+	{
 		
 		se(numero1 > numero2 e numero1 > numero3){
 			escreva("O maior numero é ")
@@ -40,7 +41,7 @@ funcao inteiro maiorNumero(inteiro numero1, inteiro numero2, inteiro numero3){
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 456; 
+ * @POSICAO-CURSOR = 435; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

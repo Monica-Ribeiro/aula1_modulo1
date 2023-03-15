@@ -5,7 +5,8 @@ programa
 	const inteiro tamanhoVetor = 10
 		inteiro vetor[tamanhoVetor]
 		
-	funcao inteiro maiorNumero(inteiro maior){
+	funcao inteiro maiorNumero(inteiro maior)
+	{
 		para(inteiro i=0; i < tamanhoVetor; i++){
 			se(vetor[i] > maior){
 				maior = vetor[i]
@@ -13,7 +14,8 @@ programa
 		}retorne maior
 	}
 
-	funcao inteiro menorNumero(inteiro menor){
+	funcao inteiro menorNumero(inteiro menor)
+	{
 		menor = 10
 		para(inteiro i=0; i < tamanhoVetor; i++){
 			se(vetor[i] < menor){
@@ -22,7 +24,8 @@ programa
 		}retorne menor
 	}
 
-	funcao inteiro somaVetor(inteiro soma){
+	funcao inteiro somaVetor(inteiro soma)
+	{
 		para(inteiro i=0; i < tamanhoVetor; i++){
 			soma = soma + vetor[i]
 			
@@ -30,7 +33,8 @@ programa
 		retorne soma
 	}
 	
-	funcao real mediaVetor(real media){
+	funcao real mediaVetor(real media)
+	{
 		real somatorio = 0.0
 		para(inteiro i=0; i < tamanhoVetor; i++){
 			somatorio = somatorio + (vetor[i])
@@ -62,7 +66,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1229; 
+ * @POSICAO-CURSOR = 624; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

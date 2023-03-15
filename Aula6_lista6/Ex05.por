@@ -1,6 +1,7 @@
 programa
 {
-	funcao logico fazerLogin(cadeia login, cadeia senha){
+	funcao logico fazerLogin(cadeia login, cadeia senha)
+	{
 		se(login == "admin" e senha == "123"){
 			retorne verdadeiro	
 		}
@@ -29,7 +30,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 392; 
+ * @POSICAO-CURSOR = 69; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
